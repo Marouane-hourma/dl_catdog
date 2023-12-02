@@ -1,5 +1,5 @@
 import os
-
+import PIL
 import tensorflow as tf
 from flask import Flask, render_template, request, send_from_directory
 
