@@ -68,7 +68,8 @@ def upload_file():
 
         prob = round((prob * 100), 2)
         
-
+        if len(upload_image_path) > 0:
+            os.remove(upload_image_path)
 
     return render_template(
         "classify.html", image_file_name=file.filename, label=label, prob=prob
