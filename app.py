@@ -39,7 +39,7 @@ def classify(model, image_path):
     )
 
     prob = cnn_model.predict(preprocessed_imgage)
-    label = "Cat" if prob[0][0] >= 0.5 else "Dog"
+    label = "Chat" if prob[0][0] >= 0.5 else "Chien"
     classified_prob = prob[0][0] if prob[0][0] >= 0.5 else 1 - prob[0][0]
 
     return label, classified_prob
